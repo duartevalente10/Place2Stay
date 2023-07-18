@@ -1,0 +1,52 @@
+<ion-content>
+  <div class="image-container">
+    <img
+      src="https://media.discordapp.net/attachments/1036449115149697044/1129105602979844116/insideViewBanner.jpeg?width=671&height=671"
+      class="background-image" alt="Image Description">
+    <ion-button class="back-button rounded-button" (click)="goToHomePage()">
+      <ion-icon class="icon-back" name="arrow-back"></ion-icon>
+    </ion-button>
+
+    <p class="rua-label">Rua António Simão</p>
+    <p class="city-label">Lisbon</p>
+    <p class="price-label">79€ per day</p>
+  </div>
+  <div class="image-galery">
+    <swiper-container [pagination]="true" [zoom]="true">
+      <swiper-slide>
+        <div class="swiper-zoom-container">
+          <img class="img-slide"
+            src="https://media.discordapp.net/attachments/1036449115149697044/1129105602040320090/imageDetails1.png?width=800&height=450">
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="swiper-zoom-container">
+          <img class="img-slide"
+            src="https://media.discordapp.net/attachments/1036449115149697044/1129171136077385808/231131.jpeg?width=800&height=450">
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="swiper-zoom-container">
+          <img class="img-slide"
+            src="https://media.discordapp.net/attachments/1036449115149697044/1129171135729254482/015_ec.jpg?width=800&height=450">
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="swiper-zoom-container">
+          <img class="img-slide"
+            src="https://media.discordapp.net/attachments/1036449115149697044/1129171136505196544/ec3.jpg?width=800&height=450">
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+  <p *ngIf="!showDescription" class="desc-label">Open description</p>
+  <p *ngIf="showDescription" class="desc-label">Close description</p>
+  <ion-button class="down-button rounded-button" fill="clear" (click)="toggleDescription()">
+    <ion-icon *ngIf="!showDescription" class="icon-bottom" name="arrow-down"></ion-icon>
+    <ion-icon *ngIf="showDescription" class="icon-bottom" name="arrow-up"></ion-icon>
+  </ion-button>
+  <div class="desc-div" *ngIf="showDescription" [innerHTML]="description"></div>
+  <ion-button class="rent-button rounded-button" (click)="goToHomePage()">
+    Rent
+  </ion-button>
+</ion-content>

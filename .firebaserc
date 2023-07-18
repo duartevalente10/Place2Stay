@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "place2stay-7b5d5": {
+      "hosting": {
+        "app": [
+          "place2stay-7b5d5"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "place2stay-7b5d5"
+  }
+}

@@ -1,0 +1,37 @@
+<ion-content [fullscreen]="true">
+  <div>
+    <h1 class="main-title">Place2Stay</h1>
+  </div>
+  <div class="login-section ion-padding">
+    <div class="heading ion-padding">
+      <p class="login-text">Login</p>
+    </div>
+    <div class="login-form ion-padding">
+      <fom [formGroup]="credentials" (ngSubmit)="login()">
+
+        <ion-item class="ion-margin-bottom">
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-input type="email" placeholder="Email" formControlName="email" errorText="Invalid email"></ion-input>
+          <ion-icon name=""></ion-icon>
+          <ion-note slot="error" *ngIf="(email?.dirty || email?.touched) && email?.errors">Email is invalid</ion-note>
+        </ion-item>
+
+        <ion-item class="ion-margin-bottom custom-item">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-input type="{{ showPwd ? 'text' : 'password' }}" placeholder="Password" formControlName="password" errorText="Invalid password"></ion-input>
+          <button style="background-color: transparent;" type="button" (click)="togglePasswordVisibility()" >
+            <ion-icon *ngIf="!showPwd" name="eye-outline"></ion-icon>
+            <ion-icon *ngIf="showPwd" name="eye-off-outline"></ion-icon>
+          </button>
+          <ion-note slot="error" *ngIf="(password?.dirty || password?.touched) && password?.errors">Email is
+            invalid</ion-note>
+        </ion-item>
+
+        
+        <ion-button size="large" class="login-button" (click)="login()" [disabled]="!credentials.valid">Login</ion-button>
+        <p class="forgot-pass-text">Forgot password? <font color="#e1c680"><strong>Recover</strong></font></p>
+      </fom>
+    </div>
+    <p class="register-text">Don't have an account? <a class="singup-link" href="/signup" onclick="goToRegisterPage()">Signup</a></p>
+  </div>
+</ion-content>

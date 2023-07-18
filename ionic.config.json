@@ -1,0 +1,7 @@
+{
+  "name": "place2StayApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar class="toolbar-format">
+    <div class="title-and-button-container">
+      <div class="img-prof-div">
+        <ion-avatar (click)="changeImage()">
+          <img class="img-prof" *ngIf="profile?.imageUrl; else placeholder_avatar;"  [src]="profile?.imageUrl">
+    
+          <ng-template #placeholder_avatar>
+            <div class="fallback">
+              <p>Select avatar</p>
+            </div>
+          </ng-template>
+          
+        </ion-avatar>
+      </div>
+      <ion-title class="ion-text-center title-format">Place2Stay</ion-title>
+      <button class="title-button" style="background-color: transparent;" type="button" (click)="logout()">
+        <ion-icon class="logout-icon" name="log-out"></ion-icon>
+      </button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-format" [fullscreen]="true">
+    <div class="map-container">
+      <div class="map" id="map-box" tabindex="0">
+
+      </div>
+  </div>
+</ion-content>
+
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">

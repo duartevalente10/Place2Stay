@@ -1,0 +1,89 @@
+ion-content {
+    --background: rgba(73, 73, 73, 1);
+    height: 100%;
+}
+
+.main-title-signup {
+    text-align: center;
+    color: #494949;
+    font-size: 84px;
+    font-weight: bold;
+    vertical-align: middle;
+    margin-top: 10%;
+}
+
+.title-section {
+    height: 20%;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
+    margin: auto;
+    background: #e1c680;
+}
+
+.login-section {
+    height: 80%;
+    max-width: 500px;
+    right: 0;
+    left: 0;
+    position: relative;
+    margin-top: 40%;
+}
+
+.login-form{
+
+    ion-item {
+        align-items: center;
+        opacity: 0.5;
+        border-radius: 30px;
+        margin-bottom: 35px;
+    }
+
+    ion-icon{
+        display: flex;
+        justify-content: center; /* Horizontally center */
+        align-items: center;
+        font-size: 30px;
+        color: #e1c680;
+    }
+
+    ion-input {
+        text-align: center;
+        color: #ffffff;
+        font-size: 25px;
+    }
+
+}
+
+.login-button{
+    text-align: center;
+    --background: #e1c680;
+    font-weight: bold;
+    width: 100%;
+    color: #494949;
+    font-size: 30px;
+    text-transform: none;
+}
+
+.forgot-pass-text{
+    text-align: center;
+    opacity: 0.8;
+    font-size: 15px;
+}
+
+.register-text{
+    text-align: center;
+    opacity: 0.8;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.singup-link{
+    color: #e1c680;
+    font-weight: bold;
+    text-decoration: none;
+}
